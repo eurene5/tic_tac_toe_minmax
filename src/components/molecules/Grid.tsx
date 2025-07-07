@@ -232,7 +232,7 @@ const Grid = () => {
           }}
           disabled={!result}
         >
-          Réinitialiser
+          {result ? 'Nouvelle Partie' : '...en cours'}
         </button>
       </div>
     </div>
