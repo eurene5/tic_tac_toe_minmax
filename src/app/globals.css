@@ -37,3 +37,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.bg-grid {
+  background-image: url('/grid.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-box {
+  background-image: url('/box.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
