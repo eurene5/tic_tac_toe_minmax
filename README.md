@@ -1,6 +1,6 @@
 # tic_tac_toe_minmax
 
-A tic tac toe game using minmax, alpha-beta algo
+> **Note:** To use the AI features, you need the corresponding API. Set the API URL in your `.env` file with the variable `NEXT_PUBLIC_APP_URL`.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
