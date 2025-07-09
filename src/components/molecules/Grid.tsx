@@ -38,7 +38,7 @@ const getBestMove = async (board: (string | null)[]) => {
     const response = await fetch(process.env.NEXT_PUBLIC_API_URL || '', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ board: apiBoard, current_player: '1' }),
+      body: JSON.stringify({ board: apiBoard, current_player: '-1' }),
     });
     console.log('Response from API:', response);
     if (!response.ok) throw new Error('Erreur API');
