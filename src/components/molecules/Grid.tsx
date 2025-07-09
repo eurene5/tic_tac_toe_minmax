@@ -35,16 +35,16 @@ const getBestMove = async (board: (string | null)[]) => {
   console.log(apiBoard);
 
   try {
-    const response = await fetch(process.env.NEXT_PUBLIC_API_URL + '/predict', {
+    const response = await fetch(process.env.NEXT_PUBLIC_API_URL || '', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ board: apiBoard }),
+      body: JSON.stringify({ board: apiBoard, current_player: '1' }),
     });
     console.log('Response from API:', response);
     if (!response.ok) throw new Error('Erreur API');
     const data = await response.json();
     console.log('Data from API:', data);
-    return data.proposed_move;
+    return data.ia_move;
   } catch (error) {
     console.error('Erreur lors de la récupération du meilleur coup:', error);
     return null;
